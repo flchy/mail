@@ -35,8 +35,6 @@ public class Consumer implements Runnable {
 
 	@Override
 	public void run() {
-		
-		System.out.println("启动消费者线程！");
 		Random r = new Random();
 		boolean isRunning = true;
 		try {

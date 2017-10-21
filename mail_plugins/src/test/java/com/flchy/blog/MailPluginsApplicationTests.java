@@ -34,7 +34,7 @@ public class MailPluginsApplicationTests {
 	public void sendSimpleMail() throws Exception {
 		SimpleMailMessage message = new SimpleMailMessage();
 		message.setFrom(Sender);
-		message.setTo("248451597@qq.com"); // 自己给自己发送邮件
+		message.setTo(Sender); // 自己给自己发送邮件
 		message.setSubject("主题：简单邮件");
 		message.setText("测试邮件内容");
 		mailSender.send(message);
@@ -113,7 +113,7 @@ public class MailPluginsApplicationTests {
 			message = mailSender.createMimeMessage();
 			MimeMessageHelper helper = new MimeMessageHelper(message, true);
 			helper.setFrom(Sender);
-			helper.setTo("15708431150@163.com");
+			helper.setTo(Sender);
 			helper.setSubject("主题：模板邮件");
 
 			Map<String, Object> model = new HashMap<>();
